@@ -10,7 +10,7 @@ public class HiService {
     private RestTemplate restTemplate ;
 
     public String hi(){
-        String url = "http://127.0.0.1:8888/innerhi";
+        String url = "http://com.newbei.helloworld:8888/innerhi";
         return this.restTemplate.getForObject(url,String.class);
     }
 }
