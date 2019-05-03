@@ -1,0 +1,11 @@
+1、修改docker源，获取java镜像
+docker pull openjdk:8u121-jdk
+
+2、分别打包
+docker build -t helloworld .
+docker build -t caller .
+
+3、启动
+docker run -d -p 8888:8888 hellworld
+# 注  在caller中用到了域名com.newbei.helloworld
+docker run -d -p 10000:10000 --add-host com.newbei.helloworld:192.168.0.222 --name caller caller
